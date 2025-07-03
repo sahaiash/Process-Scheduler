@@ -62,6 +62,13 @@ double Scheduler::calculateAverageTurnaroundTime() const {
     return totalTurnaroundTime / processes.size();
 }
 
+void Scheduler::evaluatePerformance() const {
+    double avgWT = calculateAverageWaitingTime();
+    double avgTAT = calculateAverageTurnaroundTime();
+    std::cout << std::fixed << std::setprecision(2) 
+              << "Avg WT: " << avgWT << ", Avg TAT: " << avgTAT << "\n";
+}
+
 void Scheduler::displayResults() const {
     std::cout << "\n=== " << schedulerName << " Scheduling Results ===\n";
     std::cout << std::setw(5) << "PID" << std::setw(10) << "Name" 

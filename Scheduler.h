@@ -31,6 +31,7 @@ public:
     // Statistics calculation
     double calculateAverageWaitingTime() const;
     double calculateAverageTurnaroundTime() const;
+    void evaluatePerformance() const;
     
 protected:
     // Helper functions for derived classes
