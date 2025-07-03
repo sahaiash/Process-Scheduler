@@ -1,6 +1,6 @@
 #include "Process.h"
 
-Process::Process(int id, std::string name, int arrival, int burst, int prio) {
+Process::Process(int id, const std::string& name, int arrival, int burst, int prio) {
     processId = id;
     processName = name;
     arrivalTime = arrival;
